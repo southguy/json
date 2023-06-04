@@ -17,7 +17,7 @@ if (fs.existsSync(jsonFilePath)) {
 
   app.use(jsonServerMiddlewares);
   app.use(jsonServer.bodyParser);
-  app.use('/api', jsonServerRouter); // Set the base URL for JSON Server
+  app.use('/', jsonServerRouter); // Set the base URL for JSON Server
 } else {
   console.error(`File not found: ${jsonFilePath}`);
 }
